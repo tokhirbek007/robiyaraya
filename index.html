@@ -1,0 +1,229 @@
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подарочная карта</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+        }
+        .card h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        .card p {
+            font-size: 18px;
+            color: #666;
+        }
+        .card button {
+            background-color: #ff1493;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .card button:focus {
+            outline: none;
+        }
+        .message {
+            display: none;
+            font-size: 18px;
+            color: #ff1493;
+            margin-top: 20px;
+        }
+        .fireworks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #ff1493;
+            border-radius: 50%;
+            animation: explode 600ms ease-out forwards;
+        }
+        @keyframes explode {
+            to {
+                transform: scale(50);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Добро пожаловать в наш Telegram канал</h1>
+        <p>Ты очень красивая!</p>
+        <button id="openButton">Открыть</button>
+        <div class="message" id="message">
+            Ты потрясающая, замечательная и любимая!
+        </div>
+    </div>
+    <div class="fireworks" id="fireworks"></div>
+
+    <script>
+        document.getElementById('openButton').addEventListener('click', function() {
+            document.getElementById('message').style.display = 'block';
+            this.remove();
+            showFireworks();
+            setInterval(showFireworks, 500); // Show fireworks every 500ms
+        });
+
+        function showFireworks() {
+            const fireworksContainer = document.getElementById('fireworks');
+            for (let i = 0; i < 10; i++) { // Reduced to 10 fireworks each interval for smoother performance
+                const firework = document.createElement('div');
+                firework.classList.add('firework');
+                firework.style.left = Math.random() * 100 + 'vw';
+                firework.style.top = Math.random() * 100 + 'vh';
+                fireworksContainer.appendChild(firework);
+                firework.addEventListener('animationend', () => {
+                    firework.remove();
+                });
+            }
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подарочная карта</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            max-width: 90%;
+            width: 400px;
+        }
+        .card h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        .card p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+            padding-bottom: 20px;
+        }
+        .card button {
+            background-color: #ff1493;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .card button:focus {
+            outline: none;
+        }
+        .message {
+            display: none;
+            font-size: 18px;
+            color: #ff1493;
+            margin-top: 20px;
+        }
+        .fireworks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #ff1493;
+            border-radius: 50%;
+            animation: explode 600ms ease-out forwards;
+        }
+        @keyframes explode {
+            to {
+                transform: scale(50);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Добро пожаловать в наш Telegram канал</h1>
+        <p>Ты очень красивая!</p>
+        <button id="openButton">Открыть</button>
+        <div class="message" id="message">
+            Ты потрясающая, замечательная и любимая!
+        </div>
+    </div>
+    <div class="fireworks" id="fireworks"></div>
+
+    <script>
+        document.getElementById('openButton').addEventListener('click', function() {
+            document.getElementById('message').style.display = 'block';
+            this.remove();
+            showFireworks();
+            setInterval(showFireworks, 500); // Show fireworks every 500ms
+        });
+
+        function showFireworks() {
+            const fireworksContainer = document.getElementById('fireworks');
+            for (let i = 0; i < 10; i++) { // Reduced to 10 fireworks each interval for smoother performance
+                const firework = document.createElement('div');
+                firework.classList.add('firework');
+                firework.style.left = Math.random() * 100 + 'vw';
+                firework.style.top = Math.random() * 100 + 'vh';
+                fireworksContainer.appendChild(firework);
+                firework.addEventListener('animationend', () => {
+                    firework.remove();
+                });
+            }
+        }
+    </script>
+</body>
+</html>
